@@ -1,0 +1,115 @@
+.firstheader h4 {
+  font-size: .2rem;
+  float: left;
+}
+
+.firstheader h4:hover {
+  color: #0ee6b0;
+  cursor: pointer;
+}
+
+.mainheader .container {
+  background-color: green;
+  height: 6rem;
+}
+
+.mainheader .fa-heartbeat {
+  color: #0ee6b0;
+  margin-right: .4rem;
+}
+
+.mainheader .container-vir {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.mainheader .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.mainheader .dropdown:hover {
+  color: #0ee6b0;
+  cursor: pointer;
+}
+
+.mainheader .dropdown h5 {
+  font-size: 1rem;
+}
+
+.mainheader .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 3.75rem;
+}
+
+.mainheader .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.mainheader .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.mainheader a:hover {
+  cursor: pointer;
+  background-color: #0ee6b0;
+}
+
+.mainheader h4:hover {
+  cursor: pointer;
+}
+
+.mainheader button {
+  cursor: pointer;
+  height: 3rem;
+  font-weight: bolder;
+}
+
+.mainheader button:first-of-type {
+  position: relative;
+  background-color: transparent;
+  border: solid .5px gray;
+  width: 10rem;
+  margin-right: .5rem;
+}
+
+.mainheader button:first-of-type:hover {
+  background-color: #0ee6b0;
+  color: white;
+}
+
+.mainheader button:first-of-type:hover > i {
+  color: black;
+}
+
+.mainheader button:first-of-type i {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  color: #0ee6b0;
+  font-weight: bold;
+}
+
+.mainheader button:last-of-type {
+  width: 3rem;
+  background-color: #0ee6b0;
+  color: white;
+  border: none;
+}
+
+.mainheader button:last-of-type:hover {
+  background-color: black;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
