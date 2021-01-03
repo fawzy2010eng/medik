@@ -1,0 +1,140 @@
+$maincolor:#0ee6b0;
+
+
+
+@mixin maincolorHover {
+    color: $maincolor;
+    cursor: pointer;
+}
+
+@mixin seccolorHover {
+    background-color: black;
+    cursor: pointer;
+}
+
+
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body{
+    
+}
+
+
+
+.firstheader{
+    // background-color: red;
+    h4{
+        font-size: .2rem;
+        float: left;
+        &:hover{
+            @include maincolorHover;
+        }
+    }
+}
+.mainheader{
+
+    .container{
+        background-color: green;
+        height: 6rem;
+
+    }
+    
+    .fa-heartbeat{
+        color: $maincolor;
+        margin-right: .4rem;
+    }
+    .container-vir{
+        width: 90%;
+        margin-left: 5%;
+    }
+    // h5{
+    //     float: left;
+    //     font-size: 1rem;
+    //     &:hover{
+    //         @include maincolorHover()
+    //     }
+    // }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        &:hover{
+            @include maincolorHover()
+        }
+        h5{
+            font-size: 1rem;
+        }
+      }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        top: 3.75rem;
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    a:hover{
+        cursor: pointer;
+        background-color: $maincolor;
+    }      
+    h4{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    button{
+        cursor: pointer;
+        height: 3rem;
+        font-weight: bolder;
+        &:first-of-type{
+            position: relative;
+            background-color: transparent;
+            border: solid .5px gray;
+            width: 10rem;
+            margin-right: .5rem;
+            &:hover{
+                background-color: $maincolor;
+                color: white;
+                >i{
+                    color: black;
+                }
+            }
+            i{
+                transform: rotate(45deg);
+                position: absolute;
+                top: .5rem;
+                right: .5rem;
+                color: $maincolor;
+                font-weight: bold;
+            }
+        }
+        &:last-of-type{
+            width: 3rem;
+            background-color: $maincolor;
+            color: white;
+            border: none;
+            &:hover{
+                @include seccolorHover()
+            }
+        }
+    }
+    
+
+}
