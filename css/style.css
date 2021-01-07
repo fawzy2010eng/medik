@@ -2,8 +2,13 @@ body {
   height: 3000px;
 }
 
+.head {
+  height: 0;
+}
+
 .firstheader {
   color: white;
+  height: 0;
 }
 
 .firstheader h4 {
@@ -18,7 +23,7 @@ body {
 
 .mainheader .container {
   background-color: white;
-  height: 7rem;
+  height: 0rem;
 }
 
 .mainheader .navbar {
@@ -187,9 +192,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  top: -10rem;
-  z-index: -2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,7 +259,7 @@ body {
 }
 
 .banner .item .btns button:last-of-type {
-  color: #0ee6b0;
+  color: white;
   background-color: transparent;
   border: white solid 2px;
 }
@@ -267,5 +269,13 @@ body {
   color: black;
   border: none;
   cursor: pointer;
+}
+
+.banner .item .btns button:last-of-type:hover > i {
+  color: black;
+}
+
+.banner .item .btns button:last-of-type i {
+  color: #0ee6b0;
 }
 /*# sourceMappingURL=style.css.map */
