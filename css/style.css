@@ -1,3 +1,11 @@
+body {
+  height: 3000px;
+}
+
+.firstheader {
+  color: white;
+}
+
 .firstheader h4 {
   font-size: .2rem;
   float: left;
@@ -9,8 +17,18 @@
 }
 
 .mainheader .container {
-  background-color: green;
-  height: 6rem;
+  background-color: white;
+  height: 7rem;
+}
+
+.mainheader .navbar {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .mainheader .menu .menu {
+    display: none !important;
+  }
 }
 
 .mainheader .fa-heartbeat {
@@ -28,24 +46,39 @@
   display: inline-block;
 }
 
-.mainheader .dropdown:hover {
+.mainheader .dropdown h5 {
+  font-size: 1rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainheader .dropdown h5:hover {
   color: #0ee6b0;
   cursor: pointer;
 }
 
-.mainheader .dropdown h5 {
-  font-size: 1rem;
-}
-
 .mainheader .dropdown-content {
-  display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  top: 3.75rem;
+  -webkit-transform: translateY(6rem);
+          transform: translateY(6rem);
+  visibility: hidden;
+  -webkit-transition: visibility transform();
+  transition: visibility transform();
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .mainheader .dropdown-content a {
@@ -55,8 +88,15 @@
   display: block;
 }
 
+.mainheader .dropdown-content a:hover {
+  background-color: #0ee6b0;
+  color: white;
+}
+
 .mainheader .dropdown:hover .dropdown-content {
-  display: block;
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+  visibility: visible;
 }
 
 .mainheader a:hover {
@@ -95,8 +135,8 @@
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   position: absolute;
-  top: .5rem;
-  right: .5rem;
+  top: .1rem;
+  right: .2rem;
   color: #0ee6b0;
   font-weight: bold;
 }
@@ -110,6 +150,122 @@
 
 .mainheader button:last-of-type:hover {
   background-color: black;
+  cursor: pointer;
+}
+
+.mainheader .backupMenu {
+  height: 3rem;
+  width: 3rem;
+  border: solid black 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  font-size: 1.6rem;
+}
+
+.mainheader .backupMenu:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .mainheader .backupMenu .backupMenu {
+    display: block !important;
+  }
+}
+
+.banner {
+  background-image: url("../images/banner.jpg");
+  height: 40rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: -10rem;
+  z-index: -2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .item {
+  color: white;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 15rem;
+  margin-top: 7rem;
+}
+
+.banner .item h4 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.banner .item h6 {
+  border-left: #0ee6b0 solid 0.3rem;
+}
+
+.banner .item h6:hover {
+  color: green;
+}
+
+.banner .item .btns button {
+  height: 3rem;
+  width: 12rem;
+  position: relative;
+}
+
+.banner .item .btns i {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: .1rem;
+  right: .2rem;
+  font-weight: bold;
+}
+
+.banner .item .btns button:first-of-type {
+  background-color: #0ee6b0;
+  color: black;
+  border: none;
+}
+
+.banner .item .btns button:first-of-type:hover {
+  background-color: transparent;
+  color: white;
+  border: white solid 2px;
+  cursor: pointer;
+}
+
+.banner .item .btns button:last-of-type {
+  color: #0ee6b0;
+  background-color: transparent;
+  border: white solid 2px;
+}
+
+.banner .item .btns button:last-of-type:hover {
+  background-color: #0ee6b0;
+  color: black;
+  border: none;
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

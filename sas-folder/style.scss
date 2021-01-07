@@ -1,7 +1,6 @@
 $maincolor:#0ee6b0;
 
 
-
 @mixin maincolorHover {
     color: $maincolor;
     cursor: pointer;
@@ -21,14 +20,16 @@ $maincolor:#0ee6b0;
 }
 
 
+
+
 body{
-    
+    height: 3000px;
 }
 
 
 
 .firstheader{
-    // background-color: red;
+    color: white;
     h4{
         font-size: .2rem;
         float: left;
@@ -40,11 +41,20 @@ body{
 .mainheader{
 
     .container{
-        background-color: green;
-        height: 6rem;
+        background-color: white;
+        height: 7rem;
 
     }
-    
+    .navbar{
+        padding: 1rem;
+    }
+    .menu{
+        @media screen and (max-width: 992px) {
+            .menu{
+                display: none!important;
+            }
+        }
+    }
     .fa-heartbeat{
         color: $maincolor;
         margin-right: .4rem;
@@ -53,32 +63,34 @@ body{
         width: 90%;
         margin-left: 5%;
     }
-    // h5{
-    //     float: left;
-    //     font-size: 1rem;
-    //     &:hover{
-    //         @include maincolorHover()
-    //     }
-    // }
     .dropdown {
         position: relative;
         display: inline-block;
-        &:hover{
-            @include maincolorHover()
-        }
+        
         h5{
             font-size: 1rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            &:hover{
+                @include maincolorHover()
+            }
         }
+        
       }
       
     .dropdown-content {
-        display: none;
         position: absolute;
         background-color: #f9f9f9;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        top: 3.75rem;
+        // z-index: 1;
+        transform: translateY(6rem);
+        visibility: hidden;
+        transition: visibility transform();
+        transition-duration: .3s;
+        transition-timing-function: ease-in;
+        box-shadow: none;
     }
     
     .dropdown-content a {
@@ -86,9 +98,14 @@ body{
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        &:hover{
+            background-color: $maincolor;
+            color: white;
+        }
     }
     .dropdown:hover .dropdown-content {
-        display: block;
+        transform: translateY(8px);
+        visibility: visible;
     }
     a:hover{
         cursor: pointer;
@@ -119,8 +136,8 @@ body{
             i{
                 transform: rotate(45deg);
                 position: absolute;
-                top: .5rem;
-                right: .5rem;
+                top: .1rem;
+                right: .2rem;
                 color: $maincolor;
                 font-weight: bold;
             }
@@ -135,6 +152,95 @@ body{
             }
         }
     }
-    
-
+    .backupMenu{
+        height: 3rem;
+        width: 3rem;
+        border: solid black 1px;
+        @include center();
+        display: none;
+        font-size: 1.6rem;
+        &:hover{
+            cursor: pointer;
+        }
+        @media(max-width:992px){
+            .backupMenu{
+                display: block!important;
+                 
+            }
+        }
+    }
 }
+
+.banner{
+    background-image: url('../images/banner.jpg');
+    height: 40rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -10rem;
+    z-index: -2;
+    @include center;
+    .item{
+        color: white;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 15rem;
+        margin-top: 7rem;
+        h4{
+            font-size: 4rem;
+            font-weight: bolder;
+        }
+        h6{
+            border-left: $maincolor solid .3rem;
+            &:hover{
+                color: green;
+            }
+        }
+        .btns{
+            button{
+                height: 3rem;
+                width: 12rem;
+                position: relative;
+                
+            }
+            i{
+                transform: rotate(45deg);
+                position: absolute;
+                top: .1rem;
+                right: .2rem;
+                font-weight: bold;
+            }
+            
+            button:first-of-type{
+                background-color: $maincolor;
+                color: black;
+                border: none;
+                &:hover{
+                    background-color: transparent;
+                    color: white;
+                    border: white solid 2px;
+                    cursor: pointer;            
+                }
+            }
+            
+            button:last-of-type{
+                color: $maincolor;
+                background-color: transparent;
+                border: white solid 2px;
+                &:hover{
+                    background-color: $maincolor;
+                    color: black;
+                    border: none;
+                    cursor: pointer;            
+                }
+            }
+        }
+    }
+}
+
+
+
+
