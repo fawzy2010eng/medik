@@ -27,9 +27,12 @@ body{
 }
 
 
-
+.head{
+    height: 0;
+}
 .firstheader{
     color: white;
+    height: 0;
     h4{
         font-size: .2rem;
         float: left;
@@ -42,7 +45,7 @@ body{
 
     .container{
         background-color: white;
-        height: 7rem;
+        height: 0rem;
 
     }
     .navbar{
@@ -178,9 +181,9 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    top: -10rem;
-    z-index: -2;
+    // position: relative;
+    // top: -10rem;
+    // z-index: 1;
     @include center;
     .item{
         color: white;
@@ -227,14 +230,20 @@ body{
             }
             
             button:last-of-type{
-                color: $maincolor;
+                color: white;
                 background-color: transparent;
                 border: white solid 2px;
                 &:hover{
                     background-color: $maincolor;
                     color: black;
                     border: none;
-                    cursor: pointer;            
+                    cursor: pointer;  
+                    >i{
+                        color: black;
+                    }          
+                }
+                i{
+                    color: $maincolor;
                 }
             }
         }
