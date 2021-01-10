@@ -175,22 +175,19 @@ body{
 }
 
 .banner{
-    background-image: url('../images/banner.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../images/banner.jpg');;
     height: 40rem;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // position: relative;
-    // top: -10rem;
-    // z-index: 1;
     @include center;
     .item{
         color: white;
         width: 50%;
         display: flex;
         flex-direction: column;
-        margin-left: 15rem;
+        margin-left: 10rem;
         margin-top: 7rem;
         h4{
             font-size: 4rem;
@@ -198,9 +195,6 @@ body{
         }
         h6{
             border-left: $maincolor solid .3rem;
-            &:hover{
-                color: green;
-            }
         }
         .btns{
             button{
@@ -247,9 +241,175 @@ body{
                 }
             }
         }
+        .animated { 
+            animation-duration: 100ms;
+            animation-fill-mode: both; 
+        }
+        
+
+    }
+    .owl-dots{
+        @include center();
+        margin-top: 2rem;
+        button{
+            height: .7rem;
+            width: .7rem;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .active{
+            background-color: $maincolor;
+        }
+        :nth-child(2){
+            margin-left: .4rem;
+            margin-right: .4rem;
+        }
+
+    }
+    .skew{
+        height: 100%;
+        width: 17rem;
+        background-color: RGBA(14,230,176,.7);
+        transform: skew(-45deg);
+        margin-right: -10rem;
     }
 }
 
 
+
+
+.about{
+    *, ::after, ::before{
+        box-sizing: content-box;
+    }
+    background-color: black;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    .container{
+        padding-left: 10rem;
+        padding-right: 10rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .imgs{
+            margin-right: 2rem;
+            position: relative;
+            img{
+                position: absolute;
+                z-index: 2;
+            }
+            img:first-of-type{  
+                top: 0;
+                left: 0;
+                width: 80%;
+                height: 80%;
+                z-index: 1
+            }
+            img:nth-of-type(2){
+                right: 2%;
+                bottom: 0px;
+                width: 70%;
+                height: 50%;
+            }
+            img:nth-of-type(3){
+                right: 2%;
+                top: 2%;
+                width: 30%;
+            }
+            img:nth-of-type(4){
+                width: 15%;
+                height: 15%;
+                top: 140px;
+                right: 12%;
+            }
+            img:last-of-type{
+                width: 40%;
+                left: -20%;
+                bottom: 10%;
+            }
+
+        }
+        
+        .txt{
+            margin-left: 2rem;
+            div:first-of-type{
+                display: flex;
+                align-items: center;
+                .line{
+                    height: .1rem;
+                    width: 2rem;
+                    background-color: $maincolor;
+                    float: left;
+                    margin-right: 1rem;
+                }
+                h4{
+                    color: $maincolor;
+                }
+            }
+            .third{
+                background-color: $maincolor;
+                padding-left: 1rem;
+                height: 4rem;
+                h4{
+                    line-height: 4rem;
+                }
+            }
+
+
+
+
+
+
+        }
+
+        p{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .stat{
+            @include center();
+            .piechart{
+                @include center();
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                background: conic-gradient($maincolor 64%, grey 0%);
+                position: relative;
+                margin-right: 1rem;
+                .back{
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    background-color: black;
+                }
+            }
+            h4{
+                color: $maincolor;
+                font-size: 3rem;
+                margin-right: 1rem;
+            }
+            .exp{
+                width: 70%;
+                // padding-left: 2rem;
+                h5{
+                    color: white;
+                    font-size: 2rem;
+                }
+            }
+        }
+        .stat:last-of-type{
+            .piechart{
+                background: conic-gradient($maincolor 97%, grey 0%);
+
+            }
+        }
+
+
+
+
+
+    }
+
+}
 
 
